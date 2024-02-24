@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Image</title>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+    <button style="margin-bottom: 10px" onclick="toggleImage()">
+      Toggle Image
+    </button>
+    <div>
+      <img id="img"
+        src="pw.jpg" alt="Course Image"/>
+    </div>
+
+    <script>
+      const heading = document.getElementById("heading");
+      heading.innerText = "Your Image is visible.";
+      function toggleImage() {
+        const image = document.getElementById("img");
+        if (image.style.opacity == 0) {
+          image.style.opacity = 100;
+          heading.innerText = "Your Image is visible.";
+        } else {
+          image.style.opacity = 0;
+          heading.innerText = "Your Image is hidden.";
+        }
+      }
+    </script>
+  </body>
+</html>
